@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sarabun:wght@100;300;400;500&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+
+    <title>Youtube - cloned </title>
+    <link rel="stylesheet" href="./styles.css">
+
+
+
+
+</head>
+<div class="navbar">
+    <div class="left-section">
+        <div class="left-icon">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <i class="fa-brands fa-youtube" style="color: #ff0000; font-size:40px;"></i>
+        <p>Youtube</p>
+    </div>
+
+    <div class="mid-section">
+
+        <label for="">
+            <input type="search" placeholder="Search">
+            <i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i>
+        </label>
+
+
+        <div class="mid-icon">
+            <i class="fa-solid fa-microphone"></i>
+        </div>
+
+    </div>
+
+    <div class="right-section">
+        <div class="right-icon">
+            <i class="fa-solid fa-video"></i>
+        </div>
+
+        <div class="right-icon">
+            <i class="fa-regular fa-bell"></i>
+        </div>
+        <div class="right-icon">
+            <p>L</p>
+        </div>
+
+
+    </div>
+
+</div>
+
+<main>
+    <div class="side-bar">
+        <div class="home-section side-bar-box">
+            <div class="home">
+                <i class="fa-solid fa-house"></i>
+                <p>Home</p>
+            </div>
+            <div class="home">
+                <img style="width:20px" src="https://cdn.pnggallery.com/wp-content/uploads/youtube-shorts-logo-01.png"
+                    alt="">
+                <p>Shorts</p>
+            </div>
+            <div class="home">
+                <img style="width:20px"
+                    src="https://cdn.icon-icons.com/icons2/3237/PNG/512/menu_youtube_social_media_subs_subscription_icon_197393.png"
+                    alt="">
+                <p>Subscription</p>
+            </div>
+        </div>
+
+        <div class="you-section side-bar-box">
+            <div class="home">
+                <p>You &gt;</p>
+            </div>
+            <div class="home">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" id="user-channel">
+                    <path fill="#000" fill-rule="evenodd"
+                        d="M3.5 5A1.5 1.5 0 0 1 5 3.5h14A1.5 1.5 0 0 1 20.5 5v14a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 19V5ZM5 4.5a.5.5 0 0 0-.5.5v14a.5.5 0 0 0 .5.5h14a.5.5 0 0 0 .5-.5V5a.5.5 0 0 0-.5-.5H5Z"
+                        clip-rule="evenodd"></path>
+                    <path fill="#000" fill-rule="evenodd"
+                        d="M12 7.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM9.5 9a2.5 2.5 0 1 1 5 0 2.5 2.5 0 0 1-5 0zm-.965 7.5h6.93a3.501 3.501 0 0 0-6.93 0zM7.5 17a4.5 4.5 0 1 1 9 0 .5.5 0 0 1-.5.5H8a.5.5 0 0 1-.5-.5z"
+                        clip-rule="evenodd"></path>
+                </svg>
+                <p>Your channel</p>
+            </div>
+            <div class="home">
+                <img style="width:20px"
+                    src="data:image/png;base64,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"
+                    alt="">
+                <p>History</p>
+            </div>
+            <div class="home">
+                <img style="width:20px" src="https://cdn1.iconfinder.com/data/icons/youtube-23/27/Union-6-512.png"
+                    alt="">
+                <p>Playlist</p>
+            </div>
+
+            <div class="home">
+                <img style="width:20px"
+                    src="data:image/jpeg;base64,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"
+                    alt="">
+                <p>Your videos</p>
+            </div>
+            <div class="home">
+                <img style="width:20px"
+                    src="https://cdn.iconscout.com/icon/free/png-256/free-watch-later-1781603-1513853.png?f=webp"
+                    alt="">
+                <p>Watch later</p>
+            </div>
+            <div class="home">
+                <img style="width:20px"
+                    src="https://as1.ftcdn.net/v2/jpg/03/02/85/58/1000_F_302855893_OXzl7O6qyvJNsFY3RITElrUj8Jiuubh9.jpg"
+                    alt="">
+                <p>Liked videos</p>
+            </div>
+        </div>
+
+        <div class="subscription-section side-bar-box">
+            <div class="home">
+                <p>Subscriptions</p>
+            </div>
+            <div class="home">
+                <i class="fa-solid fa-house"></i>
+                <p>Home</p>
+            </div>
+            <div class="home">
+                <img style="width:20px" src="https://cdn.pnggallery.com/wp-content/uploads/youtube-shorts-logo-01.png"
+                    alt="">
+                <p>Shorts</p>
+            </div>
+            <div class="home">
+                <img style="width:20px"
+                    src="https://cdn.icon-icons.com/icons2/3237/PNG/512/menu_youtube_social_media_subs_subscription_icon_197393.png"
+                    alt="">
+                <p>Subscription</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="content">
+        <div class="tag">
+            <p>All</p>
+            <p>tag</p>
+            <p>tag</p>
+            <p>tag</p>
+            <p>tag</p>
+            <p>tag</p>
+            <p>tag</p>
+            <p>tag</p>
+            <p>tag</p>
+            <p>tag</p>
+            <p>tag</p>
+            <p>tag</p>
+            <p>tag</p>
+            <p>tag</p>
+            <p>tag</p>
+            <p>tag</p>
+            <p>tag</p>
+            <p>tag</p>
+            <p>tag</p>
+            <p>tag</p>
+            <p>tag</p>
+            <p>tag</p>
+            <p>tag</p>
+            <p>tag</p>
+            <p>tag</p>
+            <p>tag</p>
+            <p>tag</p>
+            <p>tag</p>
+            
+
+
+        </div>
+        <div class="youtube-content">
+
+
+            <div class="video-card">
+                <img src="https://media.istockphoto.com/id/1672301801/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%A2%E0%B8%AD%E0%B8%94%E0%B9%80%E0%B8%82%E0%B8%B2-ama-dablam.jpg?s=1024x1024&w=is&k=20&c=LXqfhghki4wAP8CO2iJsZ-PlYGqDhRDo1hoagF4xK2w=" alt="">
+                
+                
+                <div class="video-description">
+                    
+                    
+
+                    <div class="text-box">
+                        <img src="https://media.istockphoto.com/id/1200677760/photo/portrait-of-handsome-smiling-young-man-with-crossed-arms.jpg?s=612x612&w=0&k=20&c=g_ZmKDpK9VEEzWw4vJ6O577ENGLTOcrvYeiLxi8mVuo=" alt="">
+
+                        <div class="video-text">
+                            <h1>Outstanding Mountain</h1>
+                            <p>Cute Dog</p>
+                            <p>2k views</p>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="https://media.istockphoto.com/id/1672301801/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%A2%E0%B8%AD%E0%B8%94%E0%B9%80%E0%B8%82%E0%B8%B2-ama-dablam.jpg?s=1024x1024&w=is&k=20&c=LXqfhghki4wAP8CO2iJsZ-PlYGqDhRDo1hoagF4xK2w=" alt="">
+                
+                
+                <div class="video-description">
+                    
+                    
+
+                    <div class="text-box">
+                        <img src="https://media.istockphoto.com/id/1200677760/photo/portrait-of-handsome-smiling-young-man-with-crossed-arms.jpg?s=612x612&w=0&k=20&c=g_ZmKDpK9VEEzWw4vJ6O577ENGLTOcrvYeiLxi8mVuo=" alt="">
+
+                        <div class="video-text">
+                            <h1>Outstanding Mountain</h1>
+                            <p>Cute Dog</p>
+                            <p>2k views</p>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="video-card">
+                <img src="https://media.istockphoto.com/id/1672301801/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%A2%E0%B8%AD%E0%B8%94%E0%B9%80%E0%B8%82%E0%B8%B2-ama-dablam.jpg?s=1024x1024&w=is&k=20&c=LXqfhghki4wAP8CO2iJsZ-PlYGqDhRDo1hoagF4xK2w=" alt="">
+                
+                
+                <div class="video-description">
+                    
+                    
+
+                    <div class="text-box">
+                        <img src="https://media.istockphoto.com/id/1200677760/photo/portrait-of-handsome-smiling-young-man-with-crossed-arms.jpg?s=612x612&w=0&k=20&c=g_ZmKDpK9VEEzWw4vJ6O577ENGLTOcrvYeiLxi8mVuo=" alt="">
+
+                        <div class="video-text">
+                            <h1>Outstanding Mountain</h1>
+                            <p>Cute Dog</p>
+                            <p>2k views</p>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="https://media.istockphoto.com/id/1672301801/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%A2%E0%B8%AD%E0%B8%94%E0%B9%80%E0%B8%82%E0%B8%B2-ama-dablam.jpg?s=1024x1024&w=is&k=20&c=LXqfhghki4wAP8CO2iJsZ-PlYGqDhRDo1hoagF4xK2w=" alt="">
+                
+                
+                <div class="video-description">
+                    
+                    
+
+                    <div class="text-box">
+                        <img src="https://media.istockphoto.com/id/1200677760/photo/portrait-of-handsome-smiling-young-man-with-crossed-arms.jpg?s=612x612&w=0&k=20&c=g_ZmKDpK9VEEzWw4vJ6O577ENGLTOcrvYeiLxi8mVuo=" alt="">
+
+                        <div class="video-text">
+                            <h1>Outstanding Mountain</h1>
+                            <p>Cute Dog</p>
+                            <p>2k views</p>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="https://media.istockphoto.com/id/1672301801/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%A2%E0%B8%AD%E0%B8%94%E0%B9%80%E0%B8%82%E0%B8%B2-ama-dablam.jpg?s=1024x1024&w=is&k=20&c=LXqfhghki4wAP8CO2iJsZ-PlYGqDhRDo1hoagF4xK2w=" alt="">
+                
+                
+                <div class="video-description">
+                    
+                    
+
+                    <div class="text-box">
+                        <img src="https://media.istockphoto.com/id/1200677760/photo/portrait-of-handsome-smiling-young-man-with-crossed-arms.jpg?s=612x612&w=0&k=20&c=g_ZmKDpK9VEEzWw4vJ6O577ENGLTOcrvYeiLxi8mVuo=" alt="">
+
+                        <div class="video-text">
+                            <h1>Outstanding Mountain</h1>
+                            <p>Cute Dog</p>
+                            <p>2k views</p>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="https://media.istockphoto.com/id/1672301801/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%A2%E0%B8%AD%E0%B8%94%E0%B9%80%E0%B8%82%E0%B8%B2-ama-dablam.jpg?s=1024x1024&w=is&k=20&c=LXqfhghki4wAP8CO2iJsZ-PlYGqDhRDo1hoagF4xK2w=" alt="">
+                
+                
+                <div class="video-description">
+                    
+                    
+
+                    <div class="text-box">
+                        <img src="https://media.istockphoto.com/id/1200677760/photo/portrait-of-handsome-smiling-young-man-with-crossed-arms.jpg?s=612x612&w=0&k=20&c=g_ZmKDpK9VEEzWw4vJ6O577ENGLTOcrvYeiLxi8mVuo=" alt="">
+
+                        <div class="video-text">
+                            <h1>Outstanding Mountain</h1>
+                            <p>Cute Dog</p>
+                            <p>2k views</p>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="https://media.istockphoto.com/id/1672301801/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%A2%E0%B8%AD%E0%B8%94%E0%B9%80%E0%B8%82%E0%B8%B2-ama-dablam.jpg?s=1024x1024&w=is&k=20&c=LXqfhghki4wAP8CO2iJsZ-PlYGqDhRDo1hoagF4xK2w=" alt="">
+                
+                
+                <div class="video-description">
+                    
+                    
+
+                    <div class="text-box">
+                        <img src="https://media.istockphoto.com/id/1200677760/photo/portrait-of-handsome-smiling-young-man-with-crossed-arms.jpg?s=612x612&w=0&k=20&c=g_ZmKDpK9VEEzWw4vJ6O577ENGLTOcrvYeiLxi8mVuo=" alt="">
+
+                        <div class="video-text">
+                            <h1>Outstanding Mountain</h1>
+                            <p>Cute Dog</p>
+                            <p>2k views</p>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="https://media.istockphoto.com/id/1672301801/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%A2%E0%B8%AD%E0%B8%94%E0%B9%80%E0%B8%82%E0%B8%B2-ama-dablam.jpg?s=1024x1024&w=is&k=20&c=LXqfhghki4wAP8CO2iJsZ-PlYGqDhRDo1hoagF4xK2w=" alt="">
+                
+                
+                <div class="video-description">
+                    
+                    
+
+                    <div class="text-box">
+                        <img src="https://media.istockphoto.com/id/1200677760/photo/portrait-of-handsome-smiling-young-man-with-crossed-arms.jpg?s=612x612&w=0&k=20&c=g_ZmKDpK9VEEzWw4vJ6O577ENGLTOcrvYeiLxi8mVuo=" alt="">
+
+                        <div class="video-text">
+                            <h1>Outstanding Mountain</h1>
+                            <p>Cute Dog</p>
+                            <p>2k views</p>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+</main>
+
+
+
+
+
+
+<body>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
